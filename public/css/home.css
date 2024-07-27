@@ -143,13 +143,21 @@ nav {
     margin-top: 50px;
 }
 
-.intro-item video{
+.intro-item img{
     max-height: auto;
     width: 100%;
     position: relative;
     z-index: -1;
     filter:brightness(50%) contrast(110%) saturate(90%);
 }
+
+/*.intro-item video{
+    max-height: auto;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    filter:brightness(50%) contrast(110%) saturate(90%);
+}*/
 
 .intro-item h2{
     font-size: 2rem;
