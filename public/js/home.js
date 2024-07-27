@@ -218,3 +218,4 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', debounce(checkVisibility, 100));
     window.addEventListener('resize', debounce(checkVisibility, 100));
 });
+
