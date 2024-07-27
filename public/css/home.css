@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-/*#114084, #3466aa, #82b7dc, #F1F1F1, #808080 and #1C1C1C */
+/*#114084, #3466aa, #378bc8, #F1F1F1, #808080, #2b2b2b and #1C1C1C */
 
 *{
     margin: 0;
@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    color: #ebeeec;
+    color: #F1F1F1;
     background-color: #1C1C1C;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,6 +41,7 @@ body{
 a{
     text-decoration: none;
 }
+
 /*NAVBAR*/
 nav {
     margin: 0;
@@ -121,7 +122,7 @@ nav {
 
 /*INTRO*/
 .intro{
-    margin: 20px 10px;
+    margin: 0;
 }
 
 .intro-item{
@@ -147,6 +148,7 @@ nav {
     width: 100%;
     position: relative;
     z-index: -1;
+    filter:brightness(50%) contrast(110%) saturate(90%);
 }
 
 .intro-item h2{
@@ -167,6 +169,60 @@ nav {
         letter-spacing: 2px;
         margin: 15px;
     }
+}
+
+/*ABOUT*/
+.about{
+    margin: 0;
+}
+
+.about-item{
+    align-items: center;
+    justify-content: center;
+    margin: 20px 10px;
+    padding: 20px 10px;
+}
+
+.about-item h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.about-item p{
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+
+.highlight .highlight-letter {
+    animation: fadeInColor 0.5s forwards; 
+    animation-delay: calc(0.01s * var(--letter-index)); 
+}
+
+@keyframes fadeInColor {
+    from {
+        opacity: 0.5;
+        color: #F1F1F1; 
+    }
+    to {
+        opacity: 1;
+        color: #378bc8; 
+    }
+}
+
+.highlight {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.highlight.active {
+    opacity: 1;
 }
 
 /*ACADEMIC*/
@@ -197,15 +253,6 @@ nav {
     width: 200px;
     margin: 0 10px; 
     border-radius: 8px;
-    opacity: 20%;
-    filter: grayscale(100%);
-    transition: opacity 0.5s ease;
-}
-
-.academic-item-child img:hover{
-    opacity: 100%;
-    filter: grayscale(0%);
-    transition: opacity 0.5s ease, grayscale 0.5s ease;
 }
 
 /*EXPERIENCE*/
@@ -240,13 +287,8 @@ nav {
     height: 200px;
     width: 200px;
     border-radius: 8px;
-    filter: blur(4px);
-    transition: filter 0.5s ease;
-}
-
-.experience-item-child img:hover{
-    transition: filter 0.5s ease;
-    filter: blur(0px);
+    position: relative;
+    z-index: 99;
 }
 
 .experience-item-child-text h2{
@@ -288,6 +330,32 @@ li::before {
     position: absolute;
     left: 0;
 }
+
+.letter {
+    display: inline-block;
+    opacity: 0.2; 
+    animation: fadeIn 0.3s forwards;
+    animation-delay: calc(0.1s * var(--letter-index)); 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.lighten {
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}
+
+.lighten.active {
+    opacity: 1;
+}
+
 
 /*PROJECT*/
 .project{
@@ -411,6 +479,7 @@ li::before {
         font-weight: 300;
     }
 }
+
 /*FOOTER*/
 .footer {
     background-color: #2b2b2b;
@@ -434,5 +503,55 @@ li::before {
 }
 .footer a:hover {
     transition: color 0.5s ease;
-    color: #82b7dc;
+    color: #378bc8;
 }
+
+/* ANIMATED SCROLLING */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.slide-up {
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+
+.slide-up.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+
+.slide-right{
+    transform: translateX(-25px);
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+.slide-right.active{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+
+.blur{
+    filter: blur(4px);
+    transition: filter 0.5s ease;
+}
+.blur.active{
+    transition: filter 0.5s ease;
+    filter: blur(0px);
+}
+
+.colorized {
+    opacity: 20%;
+    filter: grayscale(100%);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.colorized.active {
+    opacity: 100%;
+    filter: grayscale(0%);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+
