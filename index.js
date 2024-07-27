@@ -8,10 +8,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Endpoints
 app.get('/', (req, res) => {
-    res.render('home', { title: 'Home' });
+    res.render('index', { title: 'Home' });
 });
 app.get('/home', (req, res) => {
-    res.render('home', { title: 'Home' });
+    res.render('index', { title: 'Home' });
 });
 
 
