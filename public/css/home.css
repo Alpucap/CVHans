@@ -22,14 +22,17 @@ body{
     scrollbar-width: none; 
     -ms-overflow-style: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
     width: 0px; 
     display: none; 
 }
+
 ::selection {
-    background: linear-gradient(45deg, #F1F1F1, #82b7dc); 
-    color: #3466aa; 
+    color: #F1F1F1; 
+    background-color: #378bc8;
     animation: gradientHighlight 1s infinite alternate; 
 }
 
@@ -135,6 +138,7 @@ nav {
     position: absolute;
     z-index: 1;
 }
+
 .intro-item h1{
     font-size: 5rem;
     font-weight: 900;
@@ -207,11 +211,15 @@ nav {
 @keyframes fadeInColor {
     from {
         opacity: 0.5;
-        color: #F1F1F1; 
+        color: #888; 
+        text-shadow: 0 0 0px #fff, 
+                     0 0 0px #007BFF;
     }
     to {
         opacity: 1;
-        color: #378bc8; 
+        color: #F1F1F1; 
+        text-shadow: 0 0 5px #fff, 
+                 0 0 10px #007BFF;
     }
 }
 
@@ -224,12 +232,94 @@ nav {
     opacity: 1;
 }
 
+.stats {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.language-proficiency {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-bar {
+    flex: 1;
+    background-color: #2b2b2b;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 12px;
+    max-width: 300px;
+    position: relative; 
+    margin-left: 8px;
+    
+}
+
+.bar {
+    height: 100%;
+    background-color: #378bc8;
+    text-align: center;
+    line-height: 12px; 
+    color: #F1F1F1;
+    transition: width 0.5s ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.bar.active {
+    animation-play-state: running;
+}
+
+.Indonesia {
+    animation-name: Indonesianbar;
+    animation-duration: 1s; 
+    animation-fill-mode: forwards; 
+    animation-play-state: paused; 
+}
+
+.English {
+    animation-name: Englishbar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+    animation-play-state: paused; 
+}
+
+.Japanese {
+    animation-name: Japanesebar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+    animation-play-state: paused; 
+}
+
+@keyframes Indonesianbar {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+@keyframes Englishbar {
+    from { width: 0%; }
+    to { width: 70%; }
+}
+@keyframes Japanesebar {
+    from { width: 0%; }
+    to { width: 10%; }
+}
+
+
 /*ACADEMIC*/
 .academic{
-    margin: 50px 10px;
+    margin: 50px 0px;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative;
 }
 
 .academic h1{
@@ -237,6 +327,7 @@ nav {
     font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 5px;
+    z-index: 999;
 }
 
 .academic-item {
@@ -252,7 +343,103 @@ nav {
     width: 200px;
     margin: 0 10px; 
     border-radius: 8px;
+    transition: filter 0.3s ease-in-out, scale 0.5s ease-in-out;
 }
+
+.academic-item-child img.hovering {
+    filter: grayscale(100%); 
+    scale: 0.95;
+    transition: filter 0.3s ease-in-out, scale 0.5s ease-in-out;
+}
+
+.Deco-blue {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(6, 247, 255), rgb(72, 203, 255)); 
+    box-shadow: 
+        0 0 30px rgb(72, 203, 255), 
+        0 0 50px rgb(6, 247, 255);
+    transition: transform 0.2s ease;
+    pointer-events: auto;
+    z-index: -2;
+    filter: brightness(70%) contrast(110%);
+}
+
+.Deco-blue-shade {
+    position: absolute;
+    border-radius: 50%; 
+    background: linear-gradient(135deg, rgba(135, 245, 205, 1) 0%, rgba(50, 150, 255, 1) 100%, rgba(100, 195, 255, 1) 100%);
+    box-shadow: 
+        inset 0 0 20px rgba(85, 220, 200, 0.8), 
+        0 0 30px rgba(135, 245, 205, 0.7),  
+        0 0 50px rgba(100, 195, 255, 0.5);
+    transition: transform 0.2s ease;
+    pointer-events: auto;
+    z-index: -2;
+    filter: brightness(70%) contrast(110%);
+}
+
+.bubble1 {
+    width: 400px;
+    height: 400px;
+    left: -280px;
+    animation: float 4s ease-in-out infinite; 
+}
+
+.bubble2 {
+    width: 250px;
+    height: 250px;
+    animation: float 4s ease-in-out infinite reverse;
+    bottom: 20px;
+    right: -160px;
+}
+
+.bubble3 {
+    width: 150px;
+    height: 150px;
+    left: 150px;
+    top: 20px;
+}
+
+.bubble4 {
+    width: 220px;
+    height: 220px;
+    right: 200px;
+    top: 300px;
+}
+
+.bubble5 {
+    width: 200px;
+    height: 200px;
+    left: 170px;
+    bottom: 100px;
+}
+
+.bubble-anim {
+    animation: rotateBubble 1s ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+@keyframes rotateBubble {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /*EXPERIENCE*/
 .experience{
@@ -288,6 +475,26 @@ nav {
     border-radius: 8px;
     position: relative;
     z-index: 99;
+}
+.blur{
+    filter: blur(2px);
+    transition: filter 0.5s ease;
+}
+.blur.active{
+    transition: filter 0.5s ease;
+    filter: blur(0px);
+}
+
+.colorized {
+    opacity: 0.2;
+    filter: grayscale(100%);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.colorized.active {
+    opacity: 1; 
+    filter: grayscale(0%);
+    transition: opacity 0.5s ease, filter 0.5s ease;
 }
 
 .experience-item-child-text h2{
@@ -358,54 +565,10 @@ li::before {
 
 /*PROJECT*/
 .project{
-    margin: 50px 10px;
+    margin: 50px 20px;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.project h1{
-    margin: 20px 10px;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 5px;
-}
-
-.stats{
-    display: flex;
-    flex-direction: row;
-    margin: 10px 20px;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-}
-
-.github {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.github img {
-    border-radius: 5px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-}
-
-.leetcode {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.leetcode img {
-    border-radius: 5px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .carousel {
@@ -441,13 +604,13 @@ li::before {
 
 .slide-text {
     position: absolute;
-    mix-blend-mode: difference;
 }
 
-.slide h2{
-    font-size: 4rem;
-    font-weight: 900;
+.slide h2 {
+    font-size: 6rem;
     letter-spacing: 5px;
+    color: #F1F1F1;
+    text-shadow:0 0 5px #F1F1F1;
 }
 
 .slide button{
@@ -467,7 +630,13 @@ li::before {
     width: 100%;
     height: 100%;
     opacity: 30%;
-    filter:blur(4px);
+    filter:blur(2px) contrast(80%) brightness(60%) grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+
+}
+.slide img:hover{
+    filter:blur(2px) contrast(110%) brightness(85%) grayscale(0);
+    transition: filter 0.5s ease-in-out;
 }
   
 .prev {
@@ -569,25 +738,5 @@ li::before {
     transition: opacity 0.5s ease-out, transform 1s ease-out;
 }
 
-.blur{
-    filter: blur(4px);
-    transition: filter 0.5s ease;
-}
-.blur.active{
-    transition: filter 0.5s ease;
-    filter: blur(0px);
-}
-
-.colorized {
-    opacity: 20%;
-    filter: grayscale(100%);
-    transition: opacity 0.5s ease, filter 0.5s ease;
-}
-
-.colorized.active {
-    opacity: 100%;
-    filter: grayscale(0%);
-    transition: opacity 0.5s ease, filter 0.5s ease;
-}
 
 
