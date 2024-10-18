@@ -14,12 +14,14 @@ app.get('/home', (req, res) => {
     res.render('index', { title: 'Home' });
 });
 app.get('/webdev', (req, res) => {
-    res.render('webdev', { title: 'My Webdev Projects' });
+    res.render('webdev', { title: 'My Website Dev Projects' });
 });
 app.get('/data', (req, res) => {
     res.render('data', { title: 'My data Projects' });
 });
-
+app.get('/appdev', (req, res) => {
+    res.render('appdev', { title: 'My App Development Projects' });
+});
 
 app.use(express.static("public"));
 

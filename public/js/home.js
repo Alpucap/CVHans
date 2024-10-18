@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const prevBtn = document.querySelector(".prev");
     const track = document.querySelector(".track");
 
-    const NUM_SLIDES = 3;
+    const NUM_SLIDES = 4;
 
     let currSlide = 1;
 
@@ -167,12 +167,13 @@ document.addEventListener('DOMContentLoaded', function() {
         { experience: "KK POUT 23 | Volunteering as Interviewer", date: "2023" }
     ];
 
-    const EAexperiences = [
+    const Huaweiexperiences = [
         { experience: "HCIA - AI (Huawei Certified ICT Associate - Artificial Intelligence)", date: "2023" },
     ];
 
     const FTIUNTARexperiences = [
         { experience: "Data Structure Lab Instructor", date: "2024" },
+        { experience: "Finalist Web Development FTI Comp", date: "2024" },
     ];
 
     const Varanityexperiences = [
@@ -193,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add experiences to their respective lists
     addItemsToList(POUTexperiences, 'POUT-list');
-    addItemsToList(EAexperiences, 'Everyone-Asia-list');
+    addItemsToList(Huaweiexperiences, 'Huawei-list');
     addItemsToList(FTIUNTARexperiences, 'FTIUNTAR-list');
     addItemsToList(Varanityexperiences, 'Varanity-list');
 
@@ -270,74 +271,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', debounce(checkVisibility, 100));
     window.addEventListener('resize', debounce(checkVisibility, 100));
-});
-
-//Audio based academic bubble background animation 
-document.addEventListener('DOMContentLoaded', function() {
-    const bubbles = document.querySelectorAll('.Deco-blue-shade.bubble3, .Deco-blue.bubble4, .Deco-blue.bubble5'); 
-    const clapThreshold = 180; 
-    let isBubbleScaled = false; 
-
-    function scaleBubbles() {
-        bubbles.forEach(bubble => {
-            bubble.style.transform = `scale(1.2)`; 
-            bubble.classList.remove('bubble-anim');
-            setTimeout(() => {
-                bubble.style.transform = `scale(1)`; 
-                bubble.classList.add('bubble-anim');
-            }, 300);
-        });
-    }
-
-    let audioContext; 
-    let analyser;
-    let microphone;
-    let dataArray;
-
-    function initAudio() {
-        if (!audioContext) {
-            audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        }
-
-        navigator.mediaDevices.getUserMedia({ audio: true })
-            .then(stream => {
-                console.log('Microphone access granted');
-                microphone = audioContext.createMediaStreamSource(stream);
-                analyser = audioContext.createAnalyser();
-                analyser.fftSize = 2048;
-                const bufferLength = analyser.frequencyBinCount; 
-                dataArray = new Uint8Array(bufferLength);
-
-                microphone.connect(analyser);
-                detectClap();
-            })
-            .catch(error => {
-                console.error('Error accessing microphone:', error);
-            });
-    }
-
-    function detectClap() {
-        analyser.getByteFrequencyData(dataArray); 
-
-        const max = Math.max(...dataArray);
-        console.log('Max Frequency Level:', max);
-
-        if (max > clapThreshold && !isBubbleScaled) {
-            console.log('Clap detected!');
-            scaleBubbles(); // Scale all selected bubbles
-            isBubbleScaled = true; 
-        }
-
-        setTimeout(() => {
-            isBubbleScaled = false;
-        }, 300); 
-
-        requestAnimationFrame(detectClap);
-    }
-
-    document.addEventListener('click', function() {
-        initAudio();
-    }, { once: true });
 });
 
 //Academic image hovering animation
