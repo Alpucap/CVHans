@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-/*#114084, #3466aa, #378bc8, #F1F1F1, #808080, #2b2b2b and #1C1C1C */
+/*https://www.realtimecolors.com/?colors=f1f1f1-1c1c1c-84b7dc-c1ddf0-06F7FF&fonts=Inter-Inter*/
 
 *{
     margin: 0;
@@ -28,8 +28,8 @@ body{
     display: none; 
 }
 ::selection {
-    background: linear-gradient(45deg, #F1F1F1, #82b7dc); 
-    color: #3466aa; 
+    color: #F1F1F1; 
+    background-color: #378bc8;
     animation: gradientHighlight 1s infinite alternate; 
 }
 
@@ -61,12 +61,11 @@ nav {
 }
 
 .nav-item {
+    max-width: 100%;
     display: flex;
-    flex-direction: row;
     gap: 50px;
     font-weight: 700;
     font-size: 1rem;
-    justify-content: center;
 }
 
 .nav-item a {
@@ -74,16 +73,55 @@ nav {
     text-decoration: none;
     padding: 5px;
     border-radius: 8px;
-    transition: background-color 0.6s ease, color 0.7s ease;
 }
 
 .nav-item a:hover {
-    background-color: #F1F1F1;
+    background-color: #84b7dc;
     color: #1C1C1C;
+    transition: 0.3s color ease-in-out, 0.3s background-color ease-in-out;
 }
 
 .nav-item a:active {
-    color: #3466aa;
+    color: #06F7FF;
+    transition: 0.5s color ease;
+}
+
+@media screen and (max-width: 768px) {
+
+    nav{
+        padding: 5px 15px;
+        width: 80%;
+    }
+    .nav-item {
+        flex-wrap: wrap; 
+        padding: 10px 10px; 
+        gap: 3px;
+        font-size: 0.8rem;
+    }
+
+    .nav-item a {
+        padding: 5px 10px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    nav{
+        padding: 2px 10px;
+        width: 60%;
+    }
+
+    .nav-item {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 10px;
+    }
+
+    .nav-item a {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
 }
 
 /* DROPDOWN */
@@ -95,7 +133,7 @@ nav {
 .dropdown-content {
     display: none; 
     position: absolute;
-    background-color: #2b2b2b; 
+    background-color: #333333; 
     min-width: 160px; 
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
@@ -110,7 +148,7 @@ nav {
 }
 
 .dropdown-content a:hover {
-    background-color: #c3c3c3; 
+    background-color: #D1D1D1; 
 }
 
 .dropdown:hover .dropdown-content {
@@ -279,7 +317,7 @@ PROJECT
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #378bc8; 
+    background-color: #84b7dc; 
     color: #F1F1F1;
     padding: 5px 10px; 
     border-radius: 5px; 
@@ -306,28 +344,99 @@ PROJECT
 
 /*FOOTER*/
 .footer {
-    background-color: #2b2b2b;
+    background-color: #333333;
     color: #F1F1F1;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px;
     position: relative;
+    height: auto;
+}
+.footer-child{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.footer-child h1{
+    color: #84b7dc;
+    margin: 10px 15px;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: start;
 }
 
-.footer h1{
-    margin: 20px 10px;
-    font-weight: 500;
-    letter-spacing: 2px;
+/* Location */
+.footer-child .footer-loc{
+    display: flex;
+    flex-direction: column;
+}
+.footer-child .footer-loc .links{
+    display: flex;
+    flex-direction: row;
+    gap: 6.4px;
+}
+.footer-child .footer-loc h1{
+    text-align: start;
+}
+.footer-child .footer-loc a {
+    color: #F1F1F1;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: start;
+}
+.footer-child .footer-loc a:hover {
+    transition: color 0.5s ease;
+    color: #BFBFBF;
 }
 
-.footer a {
+/* Social Media */
+.footer-child .footer-socialmedia{
+    display: flex;
+    flex-direction: column;
+}
+.footer-child .footer-socialmedia .links{
+    display: flex;
+    flex-direction: row;
+    gap: 6.4px;
+    justify-content: center;
+}
+.footer-child .footer-socialmedia h1{
+    text-align: center;
+}
+.footer-child .footer-socialmedia a {
     color: #F1F1F1;
     margin: 0 15px;
     text-decoration: none;
     font-size: 24px;
 }
-.footer a:hover {
+.footer-child .footer-socialmedia a:hover {
     transition: color 0.5s ease;
-    color: #378bc8;
+    color: #BFBFBF;
+}
+
+/* Projects */
+.footer-child .footer-project{
+    display: flex;
+    flex-direction: column;
+}
+.footer-child .footer-project .links{
+    display: flex;
+    flex-direction: column;
+    gap: 6.4px;
+}
+.footer-child .footer-project h1{
+    text-align: end;
+}
+.footer-child .footer-project a {
+    color: #F1F1F1;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: end;
+}
+.footer-child .footer-project a:hover {
+    transition: color 0.5s ease;
+    color: #BFBFBF;
 }
 
 /* ANIMATED SCROLLING */
@@ -357,25 +466,5 @@ PROJECT
     transition: opacity 0.5s ease-out, transform 1s ease-out;
 }
 
-.blur{
-    filter: blur(4px);
-    transition: filter 0.5s ease;
-}
-.blur.active{
-    transition: filter 0.5s ease;
-    filter: blur(0px);
-}
-
-.colorized {
-    opacity: 20%;
-    filter: grayscale(100%);
-    transition: opacity 0.5s ease, filter 0.5s ease;
-}
-
-.colorized.active {
-    opacity: 100%;
-    filter: grayscale(0%);
-    transition: opacity 0.5s ease, filter 0.5s ease;
-}
 
 
