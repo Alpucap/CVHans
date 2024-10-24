@@ -22,6 +22,9 @@ app.get('/data', (req, res) => {
 app.get('/appdev', (req, res) => {
     res.render('appdev', { title: 'My App Development Projects' });
 });
+app.get('/uiux', (req, res) => {
+    res.render('uiux', { title: 'My UI/UX Projects' });
+});
 
 app.use(express.static("public"));
 
