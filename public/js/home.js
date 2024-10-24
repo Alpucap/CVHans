@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const NUM_SLIDES = 4;
 
-    let currSlide = 1;
+    let currSlide = 0;
 
     function slideTrack() {
         track.style.transform = `translateX(${-currSlide * 100}%)`;
@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener("blur", () => {
     document.title = "Hans Christian Handoto";
 });
-
 window.addEventListener("focus", () => {
     document.title = "My CV";
 });
@@ -168,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const Huaweiexperiences = [
-        { experience: "HCIA - AI (Huawei Certified ICT Associate - Artificial Intelligence)", date: "2023" },
+        { experience: "HCIA - AI", date: "2023" },
     ];
 
     const FTIUNTARexperiences = [
@@ -187,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const ul = document.getElementById(listId);
         items.forEach(item => {
             const li = document.createElement('li');
-            li.innerHTML = `${item.experience} <span class="date">(${item.date})</span>`;
+            li.innerHTML = `${item.experience} <span class="date">[${item.date}]</span>`;
             ul.appendChild(li);
         });
     }
@@ -276,6 +275,8 @@ document.addEventListener('DOMContentLoaded', function() {
 //Academic image hovering animation
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.academic-item-child img');
+    const hoverArea_untar = document.querySelector('.academic-item-child .untar');
+    const hoverArea_sma = document.querySelector('.academic-item-child .sman19')
 
     images.forEach(img => {
         img.addEventListener('mouseover', () => {
@@ -292,4 +293,28 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    function setHoverStyles(hoverArea, bgColor, primaryColor, secondaryColor, textColor, accentColor) {
+        hoverArea.addEventListener('mouseover', () => {
+            document.documentElement.style.setProperty('--bg-color', bgColor); 
+            document.documentElement.style.setProperty('--primary-color', primaryColor); 
+            document.documentElement.style.setProperty('--secondary-color', secondaryColor); 
+            document.documentElement.style.setProperty('--text-color', textColor); 
+            document.documentElement.style.setProperty('--accent-color', accentColor);
+        });
+    
+        hoverArea.addEventListener('mouseout', () => {
+            document.documentElement.style.setProperty('--bg-color', '#1c1c1c'); 
+            document.documentElement.style.setProperty('--primary-color', '#84b7dc'); 
+            document.documentElement.style.setProperty('--secondary-color', '#c1ddf0'); 
+            document.documentElement.style.setProperty('--text-color', '#F1F1F1'); 
+            document.documentElement.style.setProperty('--accent-color', '#06F7FF');
+        });
+    }
+    
+    setHoverStyles(hoverArea_untar, '#1c1c1c', '#9b1625', '#F5B7B1', '#F1F1F1', '#f8233b');
+
+    setHoverStyles(hoverArea_sma, '#1c1c1c', '#1d67ad', '#f7ee7e', '#F1F1F1', '#398ede');
+    
 });
+
