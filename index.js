@@ -30,6 +30,12 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Error!');
+});
+
 // Listening port
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
