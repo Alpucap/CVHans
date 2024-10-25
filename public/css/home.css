@@ -103,7 +103,7 @@ nav {
     font-size: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     nav {
         margin: 0;
         position: fixed;
@@ -181,7 +181,7 @@ Contacts
     transition: 0.3s color ease-in-out, 0.3s background-color ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .contacts {
         margin: 0;
         position: fixed;
