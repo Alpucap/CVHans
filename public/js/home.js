@@ -1,3 +1,14 @@
+// Navbar Hamburger
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector('.hamburger'); 
+    const navItem = document.querySelector('.nav-item'); 
+
+    hamburger.addEventListener('click', function() {
+        navItem.classList.toggle('active'); 
+    });
+});
+
+
 // Carousel operation
 document.addEventListener("DOMContentLoaded", function() {
     const nextBtn = document.querySelector(".next");
