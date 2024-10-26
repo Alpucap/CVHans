@@ -441,7 +441,7 @@ PROJECT
     color: var(--text-color);
     position: absolute;
     top: 50%;
-    transform: translate(-50%);
+    transform: translateY(-50%);
     border: none;
     font-size: 2rem;
     background: transparent;
@@ -458,7 +458,7 @@ PROJECT
     color: var(--text-color);
     position: absolute;
     top: 50%;
-    transform: translate(-50%);
+    transform: translateY(-50%);
     border: none;
     font-size: 2rem;
     background: transparent;
