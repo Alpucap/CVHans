@@ -120,7 +120,7 @@ nav {
         left: 0;
         width: 30%;
         background: rgba(255, 255, 255, 0.9);
-        padding: 10px 0;
+        padding: 10px 10px;
         border-radius: 8px;
         gap: 10px;
     }
@@ -157,7 +157,7 @@ nav {
         left: 0;
         width: 30%;
         background: rgba(255, 255, 255, 0.95);
-        padding: 5px 0;
+        padding: 10px 5px;
         gap: 8px;
         border-radius: 8px;
     }
@@ -221,7 +221,7 @@ Contacts
         margin: 0;
         position: fixed;
         left: 50%;
-        top: 10px;
+        top: calc(1% - 3px);
         transform: translateX(-50%);
         z-index: 99999;
         padding: 8px 20px; 
@@ -242,7 +242,7 @@ Contacts
         margin: 0;
         position: fixed;
         left: 50%;
-        top: 5px;
+        top: calc(1% - 3px);
         transform: translateX(-50%);
         z-index: 99999;
         padding: 5px 15px; 
@@ -346,18 +346,18 @@ INTRO
         justify-content: center;
         width: auto;
         height: 600px;
-        margin-left: 5px;
+        margin-left: 15px;
     }
     
     .intro-item h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 700;
         letter-spacing: 5px;
         margin-top: 30px;
     }
     
     .intro-item h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 400;
         letter-spacing: 4px;
         text-wrap: wrap;
@@ -372,11 +372,11 @@ INTRO
         justify-content: center;
         width: auto;
         height: 500px;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .intro-item h1{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 500;
         letter-spacing: 3px;
     }
@@ -924,7 +924,6 @@ ul {
     filter: brightness(110%) contrast(120%); 
 }
 
-
 .lighten {
     opacity: 0.3;
     transition: opacity 0.5s ease;
@@ -953,12 +952,12 @@ ul {
         gap: 15px;
     }
     .experience-item-child img {
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
     }
     .experience-item-child-text-right h2,
     .experience-item-child-text-left h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         letter-spacing: 3px;
     }
     .experience-item-child-text p {
@@ -985,8 +984,8 @@ ul {
         gap: 10px;
     }
     .experience-item-child img {
-        height: 100px;
-        width: 100px;
+        height: 50px;
+        width: 50px;
     }
     .experience-item-child-text-right h2,
     .experience-item-child-text-left h2 {
@@ -1112,7 +1111,7 @@ PROJECT
     .carousel {
         position: relative;
         width: 100%;
-        height: 80vh; 
+        height: auto; 
         border-radius: 0.4rem;
         margin: auto;
         overflow: hidden;
@@ -1135,14 +1134,14 @@ PROJECT
         align-items: center;
         min-width: 100%;
         min-height: 100%;
-        font-size: 1.5rem;
+        font-size: 1rem;
         background: var(--bg-color);
         gap: 15px;
         border-image: fill 0 linear-gradient(#0001, #111);
     }
     
     .slide h2 {
-        font-size: 2rem; 
+        font-size: 1rem; 
         letter-spacing: 3px;
     }
     
@@ -1213,14 +1212,14 @@ PROJECT
         align-items: center;
         min-width: 100%;
         min-height: 100%;
-        font-size: 1rem;
+        font-size: 0.8rem;
         background: var(--bg-color);
         gap: 15px;
         border-image: fill 0 linear-gradient(#0001, #111)
     }
     
     .slide h2 {
-        font-size: 1rem;
+        font-size: 0.8rem;
         letter-spacing: 4px;
     }
     
@@ -1384,14 +1383,14 @@ Projects
     .footer-child {
         display: grid;
         grid-template-columns: none;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 15px; 
+        grid-template-rows: repeat(3);
+        gap: 25px; 
     }
     .footer-child h1 {
         color: var(--primary-color);
         margin: 10px 15px;
         text-decoration: none;
-        font-size: 1.5rem; 
+        font-size: 1rem;
         text-align: center;
     }
     
@@ -1406,6 +1405,7 @@ Projects
         display: flex;
         flex-direction: row;
         gap: 10px; 
+        justify-content: center;
     }
     .footer-child .footer-loc h1 {
         text-align: center;
@@ -1491,8 +1491,8 @@ Projects
     .footer-child{
         display: grid;
         grid-template-columns: none;
-        grid-template-rows: repeat(3, 1fr);
-        gap: 5px;
+        grid-template-rows: repeat(3);
+        gap: 20px; 
     }
     .footer-child h1{
         color: var(--primary-color);

@@ -1,3 +1,20 @@
+// Navbar Hamburger
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector('.hamburger'); 
+    const navItem = document.querySelector('.nav-item'); 
+
+    hamburger.addEventListener('click', function(event) {
+        event.stopPropagation();
+        navItem.classList.toggle('active'); 
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!navItem.contains(event.target) && !hamburger.contains(event.target)) {
+            navItem.classList.remove('active');
+        }
+    });
+});
+
 // Carousel
 document.addEventListener("DOMContentLoaded", function() {
     const carousels = document.querySelectorAll(".carousel"); 
