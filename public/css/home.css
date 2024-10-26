@@ -64,17 +64,17 @@ nav {
     z-index: 99999;
     backdrop-filter: blur(10px);
     border-radius: 8px;
-    padding: 10px 30px; 
+    padding: 5px 10px; 
     width: auto;
 }
 
 .nav-item {
     max-width: 100%;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     font-weight: 700;
     font-size: 1rem;
-    padding: 15px; 
+    padding: 5px; 
     min-width: 100px;
 }
 
@@ -108,7 +108,7 @@ nav {
         top: 0;
         left: 0;
         width: 100%;
-        padding: 10px 20px;
+        padding: 5px 10px;
         transform: none;
     }
 
@@ -118,17 +118,17 @@ nav {
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        width: 30%;
         background: rgba(255, 255, 255, 0.9);
         padding: 10px 0;
-        border-radius: 0;
+        border-radius: 8px;
         gap: 10px;
     }
 
     .nav-item a {
         color: var(--bg-color);
-        text-align: center;
-        padding: 10px;
+        text-align: start;
+        padding: 5px;
         width: 100%;
     }
 
@@ -155,15 +155,16 @@ nav {
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
+        width: 30%;
         background: rgba(255, 255, 255, 0.95);
-        padding: 8px 0;
+        padding: 5px 0;
         gap: 8px;
+        border-radius: 8px;
     }
 
     .nav-item a {
         color: var(--bg-color);
-        text-align: center;
+        text-align: start;
         padding: 8px;
         font-size: 14px;
         width: 100%;
@@ -343,7 +344,7 @@ INTRO
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: auto;
         height: 600px;
         margin-left: 5px;
     }
@@ -351,7 +352,7 @@ INTRO
     .intro-item h1 {
         font-size: 3rem;
         font-weight: 700;
-        letter-spacing: 6px;
+        letter-spacing: 5px;
         margin-top: 30px;
     }
     
@@ -359,7 +360,7 @@ INTRO
         font-size: 1.5rem;
         font-weight: 400;
         letter-spacing: 4px;
-        text-wrap: nowrap;
+        text-wrap: wrap;
     }
 
 }
@@ -369,7 +370,7 @@ INTRO
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: auto;
         height: 500px;
         margin-left: 10px;
     }
@@ -377,7 +378,7 @@ INTRO
     .intro-item h1{
         font-size: 1.5rem;
         font-weight: 500;
-        letter-spacing: 4px;
+        letter-spacing: 3px;
     }
     
     .intro-item h2{
@@ -1378,11 +1379,12 @@ Projects
         padding: 20px; 
         position: relative;
         height: auto;
-        width: 100%;
+        width: auto;
     }
     .footer-child {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
         gap: 15px; 
     }
     .footer-child h1 {
@@ -1390,7 +1392,7 @@ Projects
         margin: 10px 15px;
         text-decoration: none;
         font-size: 1.5rem; 
-        text-align: start;
+        text-align: center;
     }
     
     /* 
@@ -1406,14 +1408,14 @@ Projects
         gap: 10px; 
     }
     .footer-child .footer-loc h1 {
-        text-align: start;
+        text-align: center;
     }
     .footer-child .footer-loc a {
         color: var(--text-color);
         margin: 0 10px;
         text-decoration: none;
         font-size: 0.9rem; 
-        text-align: start;
+        text-align: center;
     }
     .footer-child .footer-loc a:hover {
         transition: color 0.5s ease;
@@ -1460,14 +1462,14 @@ Projects
         gap: 10px;
     }
     .footer-child .footer-project h1 {
-        text-align: end;
+        text-align: center;
     }
     .footer-child .footer-project a {
         color: var(--text-color);
         margin: 0 10px; 
         text-decoration: none;
         font-size: 0.9rem; 
-        text-align: end;
+        text-align: center;
     }
     .footer-child .footer-project a:hover {
         transition: color 0.5s ease;
@@ -1484,11 +1486,12 @@ Projects
         padding: 5px;
         position: relative;
         height: auto;
-        width: 100%;
+        width: auto;
     }
     .footer-child{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
         gap: 5px;
     }
     .footer-child h1{
@@ -1496,7 +1499,7 @@ Projects
         margin: 10px 15px;
         text-decoration: none;
         font-size: 1rem;
-        text-align: start;
+        text-align: center;
     }
     
     /* 
@@ -1512,14 +1515,14 @@ Projects
         gap: 3px;
     }
     .footer-child .footer-loc h1{
-        text-align: start;
+        text-align: center;
     }
     .footer-child .footer-loc a {
         color: var(--text-color);
         margin: 0 15px;
         text-decoration: none;
         font-size: 0.7rem;
-        text-align: start;
+        text-align: center;
     }
     .footer-child .footer-loc a:hover {
         transition: color 0.5s ease;
@@ -1566,14 +1569,14 @@ Projects
         gap: 3px;
     }
     .footer-child .footer-project h1{
-        text-align: end;
+        text-align: center;
     }
     .footer-child .footer-project a {
         color: var(--text-color);
         margin: 0 15px;
         text-decoration: none;
         font-size: 0.7rem;
-        text-align: end;
+        text-align: center;
     }
     .footer-child .footer-project a:hover {
         transition: color 0.5s ease;
