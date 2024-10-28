@@ -107,7 +107,6 @@ nav {
     nav {
         top: 0;
         left: 0;
-        width: 100%;
         padding: 5px 10px;
         transform: none;
     }
@@ -130,6 +129,7 @@ nav {
         color: var(--bg-color);
         text-align: start;
         padding: 5px;
+        font-size: 14px;
         width: 100%;
     }
 
@@ -145,7 +145,6 @@ nav {
     nav {
         top: 0;
         left: 0;
-        width: 100%;
         padding: 8px 15px;
         transform: none;
     }
