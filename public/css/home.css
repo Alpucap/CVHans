@@ -343,8 +343,8 @@ INTRO
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 600px;
-        padding-left: 15px;
+        height: 500px;
+        margin-left: 10px;
     }
     
     .intro-item h1 {
@@ -369,7 +369,7 @@ INTRO
         align-items: center;
         justify-content: center;
         height: 500px;
-        padding-left: 15px;
+        margin-left: 10px;
     }
 
     .intro-item h1{
