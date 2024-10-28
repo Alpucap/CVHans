@@ -194,7 +194,7 @@ Contacts
     z-index: 99999;
     backdrop-filter: blur(10px);
     border-radius: 8px;
-    padding: 30px 10px; 
+    padding: 20px 5px; 
     width: auto;
 }
 .contacts-item{
@@ -206,9 +206,9 @@ Contacts
 }
 .contacts-item a{
     color: var(--text-color);
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
 }
 .contacts-item a:hover{
     background-color: transparent;
@@ -1078,7 +1078,7 @@ PROJECT
 }
 
 .prev {
-    left: 0;
+    left: 10px;
     margin: 4px;
     color: var(--text-color);
     position: absolute;
@@ -1095,7 +1095,7 @@ PROJECT
 }
   
 .next {
-    right: 0;
+    right: 10px;
     margin: 4px;
     color: var(--text-color);
     position: absolute;
@@ -1285,12 +1285,11 @@ FOOTER
     padding: 40px;
     position: relative;
     height: auto;
-    width: 100%;
 }
 .footer-child{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 0px;
 }
 .footer-child h1{
     color: var(--primary-color);

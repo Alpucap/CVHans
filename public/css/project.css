@@ -195,7 +195,7 @@ Contacts
     z-index: 99999;
     backdrop-filter: blur(10px);
     border-radius: 8px;
-    padding: 30px 10px; 
+    padding: 20px 5px; 
     width: auto;
 }
 .contacts-item{
@@ -207,9 +207,9 @@ Contacts
 }
 .contacts-item a{
     color: var(--text-color);
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px;
 }
 .contacts-item a:hover{
     background-color: transparent;
@@ -652,7 +652,6 @@ FOOTER
     padding: 40px;
     position: relative;
     height: auto;
-    width: 100%;
 }
 .footer-child{
     display: grid;
