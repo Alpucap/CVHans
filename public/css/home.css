@@ -107,7 +107,6 @@ nav {
     nav {
         top: 0;
         left: 0;
-        width: 100%;
         padding: 5px 10px;
         transform: none;
     }
@@ -144,7 +143,6 @@ nav {
     nav {
         top: 0;
         left: 0;
-        width: 100%;
         padding: 8px 15px;
         transform: none;
     }
@@ -346,7 +344,7 @@ INTRO
         justify-content: center;
         width: auto;
         height: 600px;
-        margin-left: 15px;
+        padding-left: 15px;
     }
     
     .intro-item h1 {
@@ -372,7 +370,7 @@ INTRO
         justify-content: center;
         width: auto;
         height: 500px;
-        margin-left: 15px;
+        padding-left: 15px;
     }
 
     .intro-item h1{
@@ -720,7 +718,7 @@ ACADEMIC
 
     .academic-item-text {
         padding: 5px 0;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .academic-item-child img {
@@ -747,7 +745,7 @@ ACADEMIC
 
     .academic-item {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         max-width: 100%;
         margin: 0 auto;
         gap: 0.5rem;
@@ -952,8 +950,8 @@ ul {
         gap: 15px;
     }
     .experience-item-child img {
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
     }
     .experience-item-child-text-right h2,
     .experience-item-child-text-left h2 {
@@ -961,7 +959,7 @@ ul {
         letter-spacing: 3px;
     }
     .experience-item-child-text p {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -984,8 +982,8 @@ ul {
         gap: 10px;
     }
     .experience-item-child img {
-        height: 50px;
-        width: 50px;
+        height: 80px;
+        width: 80px;
     }
     .experience-item-child-text-right h2,
     .experience-item-child-text-left h2 {
@@ -1013,7 +1011,13 @@ PROJECT
     justify-content: center;
     text-align: center;
 }
-
+.project h1{
+    margin: 20px 10px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    z-index: 999;
+}
 .carousel {
     position: relative;
     width: 100%;
@@ -1117,6 +1121,11 @@ PROJECT
 }
 
 @media screen and (max-width: 768px) {
+    .project h1 {
+        font-size: 2rem;
+        margin: 15px 10px;
+        letter-spacing: 4px;
+    }
     .carousel {
         position: relative;
         width: 100%;
@@ -1194,6 +1203,11 @@ PROJECT
 }
 
 @media screen and (max-width: 360px) {
+    .project h1 {
+        font-size: 1.5rem;
+        margin: 15px 8px;
+        letter-spacing: 3px;
+    }
 
     .carousel {
         position: relative;
