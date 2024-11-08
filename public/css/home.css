@@ -97,12 +97,6 @@ nav {
     transition: 0.5s color ease;
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
 @media screen and (max-width: 768px) {
     nav {
         top: 3px;
@@ -122,6 +116,7 @@ nav {
         padding: 10px 10px;
         border-radius: 4px;
         gap: 10px;
+        text-align: start;
     }
 
     .nav-item a {
@@ -136,9 +131,6 @@ nav {
         display: flex;
     }
 
-    .hamburger {
-        display: block;
-    }
 }
 @media screen and (max-width: 360px) {
     nav {
@@ -173,10 +165,6 @@ nav {
         display: flex;
     }
 
-    .hamburger {
-        display: block;
-        font-size: 1.2rem;
-    }
 }
 
 /*
@@ -232,7 +220,7 @@ Contacts
         gap: 15px;
         align-items: center;
     }
-    
+
     .contacts-item a{
         margin: 0;
         text-decoration: none;
@@ -264,7 +252,6 @@ Contacts
         text-align: center; 
     }
 }
-
 
 /*
 
