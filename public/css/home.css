@@ -755,7 +755,8 @@ ACADEMIC
 }
 @media screen and (max-width: 768px) {
     .academic {
-        margin: 40px 0;
+        margin: 0px;
+        padding: 40px 0;
         text-align: center;
     }
 
@@ -770,7 +771,7 @@ ACADEMIC
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         max-width: 600px;
-        margin: 0 auto;
+        margin: 0;
         gap: 1rem;
     }
 
@@ -790,7 +791,8 @@ ACADEMIC
 
 @media screen and (max-width: 360px) {
     .academic {
-        margin: 30px 0;
+        margin: 0px;
+        padding: 30px 0;
         text-align: center;
     }
 
@@ -805,7 +807,7 @@ ACADEMIC
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0;
         gap: 0.5rem;
     }
 
