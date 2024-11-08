@@ -105,7 +105,7 @@ nav {
 
 @media screen and (max-width: 768px) {
     nav {
-        top: 0;
+        top: 5px;
         left: 0;
         padding: 5px 10px;
         transform: none;
@@ -142,7 +142,7 @@ nav {
 }
 @media screen and (max-width: 360px) {
     nav {
-        top: 0;
+        top: 5px;
         left: 0;
         padding: 8px 15px;
         transform: none;
@@ -220,16 +220,19 @@ Contacts
         margin: 0;
         position: fixed;
         left: 50%;
-        top: calc(1% - 3px);
-        transform: translateX(-50%);
+        top: 5px; 
+        transform: translateX(-50%); 
         z-index: 99999;
-        padding: 8px 20px; 
+        padding: 8px 20px;
     }
-    .contacts-item{
+    
+    .contacts-item {
         display: flex;
         flex-direction: row;
         gap: 15px;
+        align-items: center;
     }
+    
     .contacts-item a{
         margin: 0;
         text-decoration: none;
@@ -241,16 +244,16 @@ Contacts
         margin: 0;
         position: fixed;
         left: 50%;
-        top: calc(1% - 3px);
-        transform: translateX(-50%);
+        top: 5px; 
+        transform: translateX(-50%); 
         z-index: 99999;
-        padding: 5px 15px; 
+        padding: 8px 20px;
     }
-
+    
     .contacts-item {
         display: flex;
-        flex-direction: row; 
-        gap: 10px; 
+        flex-direction: row;
+        gap: 15px;
         align-items: center;
     }
 
