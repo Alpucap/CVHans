@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
             navItem.classList.remove('active');
         }
     });
+    const navItemlinks = navMenu.querySelectorAll('.nav-item');
+    navItemlinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show');
+        });
+    });
+    
 });
 
 
