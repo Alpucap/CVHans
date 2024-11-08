@@ -4,6 +4,7 @@
 *{
     margin: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 html{
@@ -97,6 +98,13 @@ nav {
     transition: 0.5s color ease;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
 @media screen and (max-width: 768px) {
     nav {
         top: 3px;
@@ -131,6 +139,9 @@ nav {
         display: flex;
     }
 
+    .hamburger {
+        display: block;
+    }
 }
 @media screen and (max-width: 360px) {
     nav {
@@ -165,6 +176,10 @@ nav {
         display: flex;
     }
 
+    .hamburger {
+        display: block;
+        font-size: 1.2rem;
+    }
 }
 
 /*
@@ -269,6 +284,7 @@ INTRO
     width: 100%;
     height: 810px;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .intro-fonts{
@@ -340,7 +356,7 @@ INTRO
     }
     
     .intro-item h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 700;
         letter-spacing: 4px;
         margin-top: 30px;
@@ -364,17 +380,18 @@ INTRO
         margin-left: 10px;
     }
 
-    .intro-item h1{
-        font-size: 1.2rem;
-        font-weight: 500;
-        letter-spacing: 3px;
+    .intro-item h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        margin-top: 30px;
     }
     
-    .intro-item h2{
-        font-size: 1rem;
-        font-weight: 300;
-        letter-spacing: 3px;
-        text-wrap:wrap;
+    .intro-item h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 4px;
+        text-wrap: wrap;
     }
     
 }
@@ -738,7 +755,8 @@ ACADEMIC
 }
 @media screen and (max-width: 768px) {
     .academic {
-        margin: 40px 0;
+        margin: 0px;
+        padding: 40px 0;
         text-align: center;
     }
 
@@ -753,7 +771,7 @@ ACADEMIC
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         max-width: 600px;
-        margin: 0 auto;
+        margin: 0;
         gap: 1rem;
     }
 
@@ -773,7 +791,8 @@ ACADEMIC
 
 @media screen and (max-width: 360px) {
     .academic {
-        margin: 30px 0;
+        margin: 0px;
+        padding: 30px 0;
         text-align: center;
     }
 
@@ -788,7 +807,7 @@ ACADEMIC
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0;
         gap: 0.5rem;
     }
 
@@ -827,7 +846,6 @@ ACADEMIC
     z-index: 999;
 }
 
-/* Remove the right class and force everything to left */
 .experience-item {
     display: flex;
     align-items: center; 
@@ -835,7 +853,6 @@ ACADEMIC
     margin: 1rem 0;
 }
 
-/* Align everything to left */
 .animate-on-scroll {
     width: 100%; 
 }
@@ -861,7 +878,6 @@ ACADEMIC
     flex-grow: 1;
 }
 
-/* Blur and hover effects */
 .blur {
     filter: blur(2px);
     transition: filter 0.5s ease;
@@ -958,12 +974,11 @@ ul {
     .experience {
         margin: 40px 15px;
         text-align: center;
-        width: calc(100% - 30px);
+        width: auto;
     }
 
     .experience h1 {
         font-size: 2rem;
-        margin: 15px 10px;
         letter-spacing: 4px;
     }
 
@@ -999,12 +1014,11 @@ ul {
     .experience {
         margin: 30px 10px;
         text-align: center;
-        width: calc(100% - 20px);
+        width: auto;
     }
 
     .experience h1 {
         font-size: 1.5rem;
-        margin: 15px 8px;
         letter-spacing: 3px;
     }
 
