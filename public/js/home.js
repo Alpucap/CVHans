@@ -2,7 +2,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const hamburger = document.querySelector('.hamburger'); 
     const navItem = document.querySelector('.nav-item'); 
-
+    const navLinks = navItem.querySelectorAll('a'); 
+    
     hamburger.addEventListener('click', function(event) {
         event.stopPropagation();
         navItem.classList.toggle('active'); 
@@ -13,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
             navItem.classList.remove('active');
         }
     });
-    const navItemlinks = navMenu.querySelectorAll('.nav-item');
-    navItemlinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('show');
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            navItem.classList.remove('active');
         });
     });
     
