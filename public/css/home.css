@@ -352,7 +352,7 @@ INTRO
         align-items: center;
         justify-content: center;
         height: 500px;
-        margin-left: 10px;
+        padding-left: 10px;
     }
     
     .intro-item h1 {
@@ -377,7 +377,7 @@ INTRO
         align-items: center;
         justify-content: center;
         height: 500px;
-        margin-left: 10px;
+        padding-left: 10px;
     }
 
     .intro-item h1 {
@@ -621,7 +621,7 @@ ABOUT
         height: 12px;
         max-width: 250px;
         position: relative;
-        margin-left: 6px;
+        padding-left: 6px;
     }
 
     .bar {
@@ -693,7 +693,7 @@ ABOUT
         height: 10px;
         max-width: 180px;
         position: relative; 
-        margin-left: 6px;
+        padding-left: 6px;
     }
     
     .bar {
